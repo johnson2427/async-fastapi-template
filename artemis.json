@@ -1,0 +1,44 @@
+{
+    "project_name": "Artemis",
+    "project_slug": "artemis",
+    "domain_main": "minerva-artemis.com",
+    "domain_staging": "stag.minerva-artemis",
+
+    "docker_swarm_stack_name_main": "minerva-artemis",
+    "docker_swarm_stack_name_staging": "stag.minerva-artemis",
+
+    "secret_key": "eecf9b5565b0399098694a3825a4798e34984e9c12f163af0aa02713b0832758",
+    "first_superuser": "admin@minerva.io",
+    "first_superuser_password": "password",
+    "backend_cors_origins": "[\"http://localhost\", \"http://localhost:4200\", \"http://localhost:3000\", \"http://localhost:8080\", \"https://localhost\", \"https://localhost:4200\", \"https://localhost:3000\", \"https://localhost:8080\", \"http://dev.artemis.minerva.com\", \"https://stag.artemis.minerva.com\", \"https://artemis.minerva.com\", \"http://local.dockertoolbox.minerva.com\", \"http://localhost.minerva.com\"]",
+    "smtp_port": "587",
+    "smtp_host": "",
+    "smtp_user": "",
+    "smtp_password": "",
+    "smtp_emails_from_email": "info@minerva.io",
+
+    "postgres_password": "password",
+    "pgadmin_default_user": "admin@minerva.io",
+    "pgadmin_default_user_password": "password",
+
+    "traefik_constraint_tag": "minerva-artemis.com",
+    "traefik_constraint_tag_staging": "minerva-artemis.com",
+    "traefik_public_constraint_tag": "traefik-public",
+
+    "flower_auth": "admin:password",
+
+    "sentry_dsn": "",
+
+    "docker_image_prefix": "",
+
+    "docker_image_backend": "backend",
+    "docker_image_celeryworker": "celeryworker",
+    "docker_image_frontend": "frontend",
+
+    "_copy_without_render": [
+        "frontend/src/**/*.html",
+        "frontend/src/**/*.vue",
+        "frontend/node_modules/*",
+        "backend/app/app/email-templates/**"
+    ]
+}
